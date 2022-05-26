@@ -1,6 +1,28 @@
 #Spells Api Endpoints
 
+#Models
+###Character
+
+```
+String Name
+Class  List<Class>
+Int Lvl
+Spells List<Spells>
+```
+###Spell
+
+```
+String Name
+String Desccription
+Class Class
+Int Lvl
+String resources
+String Duration
+
+```
+
 ###Retrieve all spells
+
 
 ###Retrieve all spells for a class
 
