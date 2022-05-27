@@ -1,23 +1,66 @@
-#Spells Api Endpoints
+# Spells Api Spec
 
-###Retrieve all spells
+## Models
+### Character
 
-###Retrieve all spells for a class
+```
+String Name
+Class  List<Class>
+Int Lvl
+Spells List<Spells>
+```
+### Spell
 
-###Retrieve all spells within a level
+```
+String Name
+String Desccription
+Class Class
+Int Lvl
+String resources
+String Duration
 
-###Retrieve all spells within a class and level
+### Class
+String Name
+String Description
+String HitDice
 
-###Retrieve all spells for a character
+```
+## Endpoints
+### Retrieve all spells
+GET ` "spell/" `
 
-###Retrieve all spells for a character with in a level
+### Retrieve a spell
+GET ` spell/{spell} `
 
-###Retrive all spells available for a character with in a level up
+### Retrieve all spells for a class
+GET ` "spell/{class}" `
 
-###Create a Custom Spell
+### Retrieve all spells within a level
+GET ` "spell/{lvl}" `
 
-###Create a Character
+### Retrieve all spells within a class and level
+GET ` "spell/{class}/{lvl}" `
 
-###Update a characters Spell List
+### Retrieve all spells for a character
+GET ` "spell/{character}" `
 
-###Update a Character
+### Retrieve all spells for a character with in a level
+GET ` "spell/{character}/{lvl}" `
+
+### Retrive all spells available for a character with in a level up
+GET ` spell/levelUp/{character} `
+
+### Create a Custom Spell
+POST ` spell/`
+
+### Update a spell
+PUT ` spell/{spell} `
+
+### Create a Character
+POST ` character/ `
+
+### Update a characters Spell List
+PUT ` character/{spell} `
+
+### Update a Character
+PUT ` character/ `
