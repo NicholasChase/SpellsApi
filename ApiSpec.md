@@ -18,12 +18,14 @@ Class Class
 Int Lvl
 String resources
 String Duration
+```
 
 ### Class
+
+```
 String Name
 String Description
 String HitDice
-
 ```
 ## Endpoints
 ### Retrieve all spells
